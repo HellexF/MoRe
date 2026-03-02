@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  
+  <style>
+    .publication-title { font-family: 'Google Sans', sans-serif; font-weight: 700; }
+    .publication-authors { font-family: 'Google Sans', sans-serif; }
+    .publication-venue { color: #555; font-weight: 700; }
+    .hero-body { padding: 3rem 1.5rem; }
+    .section-title { font-family: 'Google Sans', sans-serif; }
+    .content-justified { text-align: justify; }
+    .teaser-vid { width: 100%; border-radius: 10px; }
+  </style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer</h1>
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Junton Fang<sup>1*</sup>,</span>
+            <span class="author-block">Zequn Chen<sup>2*</sup>,</span>
+            <span class="author-block">Weiqi Zhang<sup>1*</sup>,</span>
+            <span class="author-block">Donglin Di<sup>2</sup>,</span>
+            <span class="author-block">Yu-Shen Liu<sup>1†</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>Tsinghua University</span>, 
+            <span class="author-block"><sup>2</sup>Li Auto</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <a href="#" class="button is-dark is-rounded"><span class="icon"><i class="fas fa-file-pdf"></i></span><span>Paper</span></a>
+              <a href="#" class="button is-dark is-rounded"><span class="icon"><i class="fab fa-github"></i></span><span>Code</span></a>
+              <a href="#" class="button is-dark is-rounded"><span class="icon"><i class="fas fa-video"></i></span><span>Video</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="static/videos/teaser_more.mp4" type="video/mp4">
+      </video>
+      <h2 class="subtitle has-text-centered" style="margin-top: 15px;">
+        MoRe explicitly disentangles dynamic motion from static scene structure using <b>Attention-Forcing</b> and <b>Grouped Causal Attention</b>.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 section-title">Abstract</h2>
+        <div class="content content-justified">
+          <p>
+            Reconstructing dynamic 4D scenes remains challenging due to moving objects that corrupt camera pose estimation. 
+            We propose <strong>MoRe</strong>, a feed-forward 4D reconstruction network that recovers dynamic 3D scenes efficiently. 
+          </p>
+          <p>
+            Our core innovation is the <strong>Attention-Forcing</strong> strategy, which guides the model to decouple motion cues from background geometry. 
+            Additionally, we introduce <strong>Grouped Causal Attention</strong> for streamable input processing, ensuring temporal consistency across reconstructed frames.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered section-title">Method Overview</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <img src="static/images/architecture.png" alt="MoRe Architecture" style="width:100%;">
+        <div class="content content-justified" style="margin-top: 20px;">
+          <ul>
+            <li><strong>Joint Estimation:</strong> Simultaneously estimates camera poses, depth, and motion masks.</li>
+            <li><strong>Motion Disentanglement:</strong> Decouples dynamic objects from static structures via Attention-Forcing.</li>
+            <li><strong>Efficiency:</strong> A feed-forward Transformer architecture designed for real-time 4D reconstruction.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title section-title">BibTeX</h2>
+    <pre><code>@article{fang2025more,
+  title={MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer},
+  author={Fang, Junton and Chen, Zequn and Zhang, Weiqi and Di, Donglin and Zhang, Xuancheng and Yang, Chengmin and Liu, Yu-Shen},
+  journal={arXiv preprint},
+  year={2025}
+}</code></pre>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Website template borrowed from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>.</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
