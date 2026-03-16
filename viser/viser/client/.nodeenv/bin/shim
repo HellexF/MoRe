@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+export NODE_PATH='/mnt/pfs-mc0p4k/cvg/team/luochaofan/monst3r/viser/src/viser/client/.nodeenv/lib/node_modules'
+export NPM_CONFIG_PREFIX='/mnt/pfs-mc0p4k/cvg/team/luochaofan/monst3r/viser/src/viser/client/.nodeenv'
+export npm_config_prefix='/mnt/pfs-mc0p4k/cvg/team/luochaofan/monst3r/viser/src/viser/client/.nodeenv'
+exec '/mnt/pfs-mc0p4k/cvg/team/luochaofan/monst3r/viser/src/viser/client/.nodeenv/bin/node' "$@"
