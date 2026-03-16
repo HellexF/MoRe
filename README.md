@@ -21,7 +21,7 @@
 <div align="center"></div>
 <div align="center"></div>
 <p align="center">
-    <img src="media/cover.pdf" width="780" />
+    <img src="media/cover.png" width="780" />
 </p>
 
 ## 🚀 News
@@ -38,7 +38,7 @@ MoRe is a feedforward 4D reconstruction transformer designed to efficiently reco
 - **Grouped Causal Attention**: Captures temporal dependencies and adapts to varying token lengths for coherent geometry.
 
 <p align="center">
-    <img src="media/visualization.pdf" width="800" />
+    <img src="media/visualization.png" width="800" />
 </p>
 
 ---

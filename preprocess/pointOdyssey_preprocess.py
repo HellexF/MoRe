@@ -81,7 +81,6 @@ def get_mask_by_dis_threshold(seg_rgb, dis, valid, threshold):
         dis_b = dis_flat[b]                # [H*W]
         valid_b = valid_flat[b]            # [H*W]
 
-        # 找到这个 batch 的唯一颜色
         unique_colors = torch.unique(seg_b.to(torch.int32), dim=0)  # [N_color, 3]
 
         for color in unique_colors:
@@ -105,16 +104,6 @@ def get_mask_by_dis_threshold(seg_rgb, dis, valid, threshold):
     return avg_dis_dict
 
 def reduce_valid_stats(distances: torch.Tensor, depth_masks: torch.Tensor):
-    """
-    Args:
-        distances: [N, H, W] float tensor
-        depth_masks: [N, H, W] bool tensor
-
-    Returns:
-        count: int (有效像素总数)
-        sum_: float (所有有效像素值的和)
-        squared_sum: float (所有有效像素值的平方和)
-    """
     masked_values = distances[depth_masks]        # [num_valid,]
     count = depth_masks.sum()
     sum_ = masked_values.sum()
