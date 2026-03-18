@@ -117,11 +117,8 @@ If you find our code or paper useful, please consider citing
 @misc{fang2026moremotionawarefeedforward4d,
       title={MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer}, 
       author={Juntong Fang and Zequn Chen and Weiqi Zhang and Donglin Di and Xuancheng Zhang and Chengmin Yang and Yu-Shen Liu},
-      year={2026},
-      eprint={2603.05078},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2603.05078}, 
+      booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+      year={2026}
 }
 ```
 
