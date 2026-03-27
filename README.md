@@ -89,7 +89,7 @@ We offer the training config for both full attention and stream training on Omni
 torchrun --nproc_per_node=$GPU_NUM training/launch.py --config omniworld_full
 ```
 
-Similarly, to train the stream versiob, run 
+Similarly, to train the stream version, run 
 ```shell
 torchrun --nproc_per_node=$GPU_NUM training/launch.py --config omniworld_stream
 ```
@@ -114,11 +114,10 @@ This project is built upon [VGGT](https://github.com/facebookresearch/vggt), [Ma
 
 If you find our code or paper useful, please consider citing
 ```bibtex
-@misc{fang2026moremotionawarefeedforward4d,
+@inproceedings{fang2026moremotionawarefeedforward4d,
       title={MoRe: Motion-aware Feed-forward 4D Reconstruction Transformer}, 
       author={Juntong Fang and Zequn Chen and Weiqi Zhang and Donglin Di and Xuancheng Zhang and Chengmin Yang and Yu-Shen Liu},
       booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
       year={2026}
 }
 ```
-
