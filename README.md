@@ -16,7 +16,7 @@
     ·
     <a href="https://yushen-liu.github.io/"><strong>Yu-Shen Liu†</strong></a>
 </p>
-<h2 align="center">CVPR 2026</h2>
+<h2 align="center">CVPR 2026 Highlight</h2>
 <h3 align="center"><a href="https://arxiv.org/abs/2603.05078">Paper</a> | <a href="https://hellexf.github.io/MoRe/">Project Page</a></h3>
 <div align="center"></div>
 <div align="center"></div>
