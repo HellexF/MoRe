@@ -162,7 +162,7 @@ class MoReInference:
             cv2.imwrite(f"{self.args.output_dir}/depth/depth_vis_{i:05d}.png", d_vis)
 
             # Filter Points by Confidence and Save PLY
-            pts = point_map_unproj[i].reshape(-1, 3).cpu().float().numpy()
+            pts = np.asarray(point_map_unproj[i], dtype=np.float32).reshape(-1, 3)
             conf = depth_conf_np[i].reshape(-1)
             valid_mask = (conf >= conf_threshold) & (conf > 1e-5)
             
@@ -177,10 +177,9 @@ class MoReInference:
                     f"{self.args.output_dir}/masks/mask_{i:05d}.png"
                 )
 
-        # Optional: Save Global Scene (GLB)
-        scene = trimesh.Scene()
-        # Integration of alignment and camera visualization could go here
-        scene.export(os.path.join(self.args.output_dir, 'glb', 'scene.glb'))
+        # The original GLB export constructed an empty scene and always failed.
+        # Per-frame PLY files are the actual point-cloud outputs; do not write a fake GLB.
+        print("[*] Skipping global GLB: scene aggregation is not implemented.")
         
         print(f"[!] Processing finished. Outputs located in: {self.args.output_dir}")
 

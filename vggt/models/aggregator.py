@@ -292,7 +292,7 @@ class Aggregator(nn.Module):
                         tokens = tokens
                 elif attn_type == "global":
                     tokens, global_idx, global_intermediates = self._process_global_attention(
-                        tokens, B, S, P, C, global_idx, pos=pos, save_intermediate=id in save_ids, save_attn=P if id == 23 else 0
+                        tokens, B, S, P, C, global_idx, pos=pos, save_intermediate=id in save_ids
                     )
                 else:
                     raise ValueError(f"Unknown attention type: {attn_type}")

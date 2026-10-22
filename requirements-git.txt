@@ -1,0 +1,1 @@
+git+https://github.com/jytime/LightGlue.git@2f23ca2ea9638cecad7f7220795210fc6b8353c3#egg=lightglue

@@ -17,8 +17,6 @@ import torch
 from torch import Tensor
 from torch import nn
 import torch.nn.functional as F
-from magi_attention.functional.flex_flash_attn import flex_flash_attn_func
-from magi_attention.common.enum import AttnMaskType
 # from xformers.ops import memory_efficient_attention
 
 XFORMERS_AVAILABLE = False
@@ -106,6 +104,7 @@ class Attention(nn.Module):
 
 class SparseAttention(Attention):
     def forward(self, x: Tensor, attn_bias=None, pos=None, motion_scores=None, save_attn=False, kv_cache=None) -> Tensor:
+        from magi_attention.functional.flex_flash_attn import flex_flash_attn_func
         B, N, C = x.shape
         qkv = self.qkv(x).reshape(B, N, 3, self.num_heads, self.head_dim).permute(2, 0, 3, 1, 4)
         q, k, v = qkv.unbind(0)

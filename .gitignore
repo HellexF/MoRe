@@ -1,0 +1,24 @@
+# BEGIN MORE LOCAL ARTIFACTS (2026-10-21)
+# Python caches and local source backups
+__pycache__/
+*.py[cod]
+*.bak-*
+
+# Large artifacts, weights and generated outputs
+/pretrained/
+/results/
+/output/
+/logs/
+/wandb/
+/runs/
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.safetensors
+*.npy
+*.npz
+*.ply
+*.glb
+*.log
+# END MORE LOCAL ARTIFACTS (2026-10-21)
